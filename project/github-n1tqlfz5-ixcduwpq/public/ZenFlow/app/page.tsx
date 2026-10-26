@@ -684,26 +684,26 @@ function GradeOrb({ score }: { score: number | null }) {
 function CourseArtwork({ courseName }: { courseName: string }) {
   const subject = courseName.toLocaleLowerCase()
   const artwork = /\b(math|algebra|geometry|calculus|statistics|trigonometry)\b/.test(subject)
-    ? { name: 'math', title: 'Mathematics', icon: Calculator, accent: 'sage', marks: ['x² + y² = r²', 'π', '∑', 'f(x) = mx + b', 'A = πr²', '√49 = 7', 'E = mc²', 'sin²θ + cos²θ = 1', '∫ x² dx', 'a² + b² = c²', 'θ', 'y = x²'] }
+    ? { name: 'math', title: 'Mathematics', icon: Calculator, accent: 'math', marks: ['x² + y² = r²', 'π', '∑', 'f(x) = mx + b', 'A = πr²', '√49 = 7', 'E = mc²', 'sin²θ + cos²θ = 1', '∫ x² dx', 'a² + b² = c²', 'θ', 'y = x²'] }
     : /\b(band\s*strings|strings|orchestra|band|choir|music)\b/.test(subject)
-      ? { name: 'music', title: 'Band & Strings', icon: Music2, accent: 'lavender', marks: ['♪', '♫', '♩', '𝄞', '♬', '♭', '♮', '♯', '𝄢', 'allegro', 'do · re · mi', 'crescendo'] }
+      ? { name: 'music', title: 'Band & Strings', icon: Music2, accent: 'music', marks: ['♪', '♫', '♩', '𝄞', '♬', '♭', '♮', '♯', '𝄢', 'allegro', 'do · re · mi', 'crescendo'] }
       : /\b(visual.*performing|performing.*arts|visual arts|theater|theatre|dance|drama|art|design)\b/.test(subject)
-        ? { name: 'art', title: 'Visual & Performing Arts', icon: Palette, accent: 'lavender', marks: ['✳', '◌', '△', 'stage / light', '色', '✦', 'gesture', 'composition', '1 · 2 · 3', '✧', 'form / space', 'curtain up'] }
+        ? { name: 'art', title: 'Visual & Performing Arts', icon: Palette, accent: 'art', marks: ['✳', '◌', '△', 'stage / light', '色', '✦', 'gesture', 'composition', '1 · 2 · 3', '✧', 'form / space', 'curtain up'] }
         : /\b(english|literature|writing|language arts|ela|reading)\b/.test(subject)
-          ? { name: 'literature', title: 'English & Literature', icon: BookOpen, accent: 'rose', marks: ['“Once upon…”', 'Aa', '¶', 'metaphor', '✍', 'chapter 01', 'theme →', 'simile', '✒', '— dialogue —', 'write / revise', 'the quiet narrator'] }
+          ? { name: 'literature', title: 'English & Literature', icon: BookOpen, accent: 'literature', marks: ['“Once upon…”', 'Aa', '¶', 'metaphor', '✍', 'chapter 01', 'theme →', 'simile', '✒', '— dialogue —', 'write / revise', 'the quiet narrator'] }
           : /\b(history|government|civics|economics|social studies)\b/.test(subject)
-            ? { name: 'history', title: 'History & Society', icon: Landmark, accent: 'sand', marks: ['1776', '◎', '✳', 'primary source', '◆', 'timeline →', 'cause → effect', 'BC · AD', 'archive', '◇', 'whose story?', 'then / now'] }
+            ? { name: 'history', title: 'History & Society', icon: Landmark, accent: 'history', marks: ['1776', '◎', '✳', 'primary source', '◆', 'timeline →', 'cause → effect', 'BC · AD', 'archive', '◇', 'whose story?', 'then / now'] }
             : /\b(chem|biology|physics|science|anatomy|environment)\b/.test(subject)
-              ? { name: 'science', title: 'Science', icon: Atom, accent: 'mint', marks: ['H₂O', '⚛', 'CO₂', 'E = mc²', 'NaCl', 'cell →', 'observe · test', 'O₂', '→ hypothesis', '✳', 'energy ↔ matter', 'specimen 04'] }
+              ? { name: 'science', title: 'Science', icon: Atom, accent: 'science', marks: ['H₂O', '⚛', 'CO₂', 'E = mc²', 'NaCl', 'cell →', 'observe · test', 'O₂', '→ hypothesis', '✳', 'energy ↔ matter', 'specimen 04'] }
               : /\b(computer|coding|programming|technology|robotics)\b/.test(subject)
-                ? { name: 'technology', title: 'Technology', icon: Code2, accent: 'blue', marks: ['{ }', '</>', '01', 'if (curious)', '0101', 'build();'] }
+                ? { name: 'technology', title: 'Technology', icon: Code2, accent: 'technology', marks: ['{ }', '</>', '01', 'if (curious)', '0101', 'build();'] }
                 : /\b(physical education|p\.e\.|fitness|health)\b/.test(subject)
-                  ? { name: 'movement', title: 'Movement & Health', icon: Dumbbell, accent: 'sage', marks: ['breathe in', '↗', '○', 'move / rest', '✳', 'one more'] }
+                  ? { name: 'movement', title: 'Movement & Health', icon: Dumbbell, accent: 'movement', marks: ['breathe in', '↗', '○', 'move / rest', '✳', 'one more'] }
                   : /\b(spanish|french|mandarin|chinese|language)\b/.test(subject)
-                    ? { name: 'language', title: 'World Languages', icon: Globe, accent: 'blue', marks: ['hola', 'bonjour', '你好', 'ciao', 'あ', '¡vamos!'] }
+                    ? { name: 'language', title: 'World Languages', icon: Globe, accent: 'language', marks: ['hola', 'bonjour', '你好', 'ciao', 'あ', '¡vamos!'] }
                     : /\b(agriculture|garden|plant|ecology)\b/.test(subject)
-                      ? { name: 'nature', title: 'Nature Studies', icon: Leaf, accent: 'mint', marks: ['芽', '✿', '葉', 'grow slowly', '☼', 'soil → seed'] }
-                      : { name: 'learning', title: 'A Curious Mind', icon: BookOpen, accent: 'sage', marks: ['✳', '◌', '△', 'keep wondering', '✦', 'one idea at a time'] }
+                      ? { name: 'nature', title: 'Nature Studies', icon: Leaf, accent: 'nature', marks: ['芽', '✿', '葉', 'grow slowly', '☼', 'soil → seed'] }
+                      : { name: 'learning', title: 'A Curious Mind', icon: BookOpen, accent: 'learning', marks: ['✳', '◌', '△', 'keep wondering', '✦', 'one idea at a time'] }
   const Icon = artwork.icon
   const detailIcons = artwork.name === 'math'
     ? [Shapes, Calculator]
@@ -722,12 +722,10 @@ function CourseArtwork({ courseName }: { courseName: string }) {
       </div>
       <div className={`course-art-scene course-art-scene-${artwork.name}`}>
         <div className="course-art-orbit course-art-orbit-one" />
-        <div className="course-art-orbit course-art-orbit-two" />
-        {artwork.marks.map((mark, index) => (
+        {artwork.marks.slice(0, 4).map((mark, index) => (
           <span
             className={`course-art-mark course-art-mark-${(index % 12) + 1}`}
             key={mark}
-            style={{ animationDelay: `${index * -0.7}s` }}
           >
             {mark}
           </span>
@@ -970,6 +968,207 @@ function formatCategoryImpact(impact: number | null) {
   const direction = impact > 0 ? 'raises' : 'lowers';
   const amount = `${impact > 0 ? '+' : ''}${impact.toFixed(2)} pp`
   return `${direction} category average ${amount}`;
+}
+
+function CourseGradeTrend({
+  course,
+  hypotheticalMode,
+  hypotheticalGrade,
+  assignmentOverrides,
+  hypotheticalAssignments,
+}: {
+  course: GradebookCourse
+  hypotheticalMode: boolean
+  hypotheticalGrade: number | null
+  assignmentOverrides: Record<number, AssignmentOverride>
+  hypotheticalAssignments: HypotheticalAssignment[]
+}) {
+  const [hoveredPointIndex, setHoveredPointIndex] = useState<number | null>(null)
+  let earned = 0
+  let possible = 0
+  const assignments = [
+    ...course.assignments.map((assignment, index) => {
+      const override = hypotheticalMode ? assignmentOverrides[index] : undefined
+      const editedPoints = override ? Number(override.points) : null
+      const editedPossible = override ? Number(override.pointsPossible) : null
+      const validOverride = Boolean(
+        override &&
+        override.points.trim() !== '' &&
+        override.pointsPossible.trim() !== '' &&
+        Number.isFinite(editedPoints) &&
+        Number.isFinite(editedPossible) &&
+        editedPoints !== null &&
+        editedPossible !== null &&
+        editedPoints >= 0 &&
+        editedPossible > 0
+      )
+      return {
+        ...assignment,
+        index,
+        isHypothetical: false,
+        points: validOverride ? editedPoints : assignment.points,
+        pointsPossible: validOverride ? editedPossible : assignment.pointsPossible,
+      }
+    }),
+    ...(hypotheticalMode ? hypotheticalAssignments.map(assignment => ({
+      name: `Hypothetical assignment ${assignment.id + 1}`,
+      category: assignment.category,
+      points: assignment.points,
+      pointsPossible: assignment.pointsPossible,
+      dropped: false,
+      date: null,
+      index: course.assignments.length + assignment.id,
+      isHypothetical: true,
+    })) : []),
+  ]
+    .filter(assignment =>
+      !assignment.dropped &&
+      assignment.points !== null &&
+      assignment.pointsPossible !== null &&
+      assignment.pointsPossible > 0
+    )
+    .sort((a, b) => {
+      if (a.date && b.date) {
+        return a.date.localeCompare(b.date) || a.index - b.index
+      }
+      if (a.date) return -1
+      if (b.date) return 1
+      return a.index - b.index
+    })
+    .map(assignment => {
+      const previousAverage = possible > 0 ? (earned / possible) * 100 : null
+      earned += assignment.points ?? 0
+      possible += assignment.pointsPossible ?? 0
+      const average = (earned / possible) * 100
+      return {
+        ...assignment,
+        average,
+        delta: previousAverage === null ? null : average - previousAverage,
+        scorePercent: ((assignment.points ?? 0) / (assignment.pointsPossible ?? 1)) * 100,
+      }
+    })
+
+  const chart = { width: 900, height: 220, left: 56, right: 18, top: 14, bottom: 14 }
+  const plotWidth = chart.width - chart.left - chart.right
+  const plotHeight = chart.height - chart.top - chart.bottom
+  const lowestAverage = assignments.length ? Math.min(...assignments.map(assignment => assignment.average)) : 0
+  const highestAverage = assignments.length ? Math.max(...assignments.map(assignment => assignment.average)) : 100
+  let minGrade = Math.max(0, Math.floor((lowestAverage - 5) / 5) * 5)
+  let maxGrade = Math.min(100, Math.ceil((highestAverage + 5) / 5) * 5)
+  if (minGrade === maxGrade) {
+    minGrade = Math.max(0, minGrade - 5)
+    maxGrade = Math.min(100, maxGrade + 5)
+  }
+  const yForGrade = (grade: number) =>
+    chart.top + ((maxGrade - grade) / (maxGrade - minGrade)) * plotHeight
+  const plottedAssignments = assignments.map((assignment, index) => ({
+    ...assignment,
+    x: chart.left + (assignments.length > 1 ? (index / (assignments.length - 1)) * plotWidth : plotWidth / 2),
+    y: yForGrade(assignment.average),
+  }))
+  const chartPath = plottedAssignments.reduce((path, point, index) => {
+    if (index === 0) return `M ${point.x} ${point.y}`
+    const previous = plottedAssignments[index - 1]
+    const beforePrevious = plottedAssignments[index - 2] ?? previous
+    const next = plottedAssignments[index + 1] ?? point
+    const controlOneX = previous.x + (point.x - beforePrevious.x) / 6
+    const controlOneY = previous.y + (point.y - beforePrevious.y) / 6
+    const controlTwoX = point.x - (next.x - previous.x) / 6
+    const controlTwoY = point.y - (next.y - previous.y) / 6
+    return `${path} C ${controlOneX} ${controlOneY}, ${controlTwoX} ${controlTwoY}, ${point.x} ${point.y}`
+  }, '')
+  const areaPath = plottedAssignments.length > 1
+    ? `${chartPath} L ${plottedAssignments.at(-1)?.x} ${chart.height - chart.bottom} L ${plottedAssignments[0].x} ${chart.height - chart.bottom} Z`
+    : ''
+  const ticks = [minGrade, (minGrade + maxGrade) / 2, maxGrade]
+  const hoveredPoint = hoveredPointIndex === null ? null : plottedAssignments[hoveredPointIndex] ?? null
+
+  return (
+    <section className="panel course-grade-trend" aria-labelledby="course-grade-trend-title">
+      <div className="panel-heading">
+        <div>
+          <span className="eyebrow">RUNNING POINTS AVERAGE</span>
+          <h2 id="course-grade-trend-title">Assignment <em>grade trend</em></h2>
+        </div>
+        <Gauge />
+      </div>
+      {assignments.length ? <>
+        <div className="course-grade-chart-wrap">
+        <svg className="course-grade-chart" viewBox={`0 0 ${chart.width} ${chart.height}`} role="group" aria-labelledby="course-grade-chart-title course-grade-chart-description">
+          <title id="course-grade-chart-title">Running points average by assignment</title>
+          <desc id="course-grade-chart-description">The chart plots the cumulative points average after each graded assignment, in date order.</desc>
+          <defs>
+            <linearGradient id="course-grade-area-gradient" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stopColor="#43d99b" stopOpacity=".2" />
+              <stop offset="100%" stopColor="#43d99b" stopOpacity=".015" />
+            </linearGradient>
+          </defs>
+          {ticks.map(tick => {
+            const y = yForGrade(tick)
+            return <g key={tick}>
+              <line x1={chart.left} x2={chart.width - chart.right} y1={y} y2={y} />
+              <text x={chart.left - 10} y={y + 4} textAnchor="end">{tick}%</text>
+            </g>
+          })}
+          {areaPath && <path className="course-grade-area" d={areaPath} />}
+          {plottedAssignments.length > 1 && <path className="course-grade-line" d={chartPath} />}
+          {plottedAssignments.map((point, index) => <circle
+            className={`${hoveredPointIndex === index ? 'active' : ''}${point.isHypothetical ? ' hypothetical' : ''}`}
+            key={`${point.name}-${point.index}`}
+            cx={point.x}
+            cy={point.y}
+            r="5"
+            role="button"
+            tabIndex={0}
+            aria-label={`${point.isHypothetical ? 'Hypothetical, ' : ''}${point.name}: score ${point.scorePercent.toFixed(1)}%, running average ${point.average.toFixed(1)}%`}
+            onMouseEnter={() => setHoveredPointIndex(index)}
+            onMouseLeave={() => setHoveredPointIndex(null)}
+            onFocus={() => setHoveredPointIndex(index)}
+            onBlur={() => setHoveredPointIndex(null)}
+          >
+            <title>{point.isHypothetical ? 'Hypothetical, ' : ''}{point.name}: score {point.scorePercent.toFixed(1)}%, running average {point.average.toFixed(1)}%</title>
+          </circle>)}
+        </svg>
+        {hoveredPoint && <div
+          className={`course-grade-tooltip${hoveredPoint.y < 84 ? ' course-grade-tooltip-below' : ''}`}
+          style={{ '--tooltip-x': `${(hoveredPoint.x / chart.width) * 100}%`, '--tooltip-y': `${(hoveredPoint.y / chart.height) * 100}%` } as React.CSSProperties}
+          aria-live="polite"
+        >
+          <span>{hoveredPoint.isHypothetical ? 'Hypothetical assignment' : hoveredPoint.date ? formatPeriodDate(hoveredPoint.date) : hoveredPoint.category}</span>
+          <strong>{hoveredPoint.name}</strong>
+          <b>{hoveredPoint.scorePercent.toFixed(2)}% score</b>
+          <small>Running average: {hoveredPoint.average.toFixed(2)}%</small>
+        </div>}
+        </div>
+        <div className="course-grade-trend-legend">
+          <span><i /> Running average after each graded assignment</span>
+          <span>Official course grade: {course.score === null ? 'Unavailable' : `${course.score.toFixed(1)}%`}</span>
+          {hypotheticalMode && <>
+            <span className="course-grade-hypothetical-legend"><i /> Hypothetical assignment</span>
+            <span>Hypothetical course grade: {hypotheticalGrade === null ? 'Unavailable' : `${hypotheticalGrade.toFixed(1)}%`}</span>
+          </>}
+        </div>
+        <ol className="course-grade-impact-list">
+          {plottedAssignments.map((assignment, index) => (
+            <li key={`${assignment.name}-${assignment.index}`}>
+              <div className="course-grade-assignment">
+                <span className="course-grade-sequence">{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <strong>{assignment.name}</strong>
+                  <small>{assignment.category}{assignment.date ? ` · ${formatPeriodDate(assignment.date)}` : ''}{assignment.isHypothetical ? ' · Hypothetical' : ''}</small>
+                </div>
+              </div>
+              <span className="course-grade-score">{assignment.scorePercent.toFixed(1)}%</span>
+              <span className={`course-grade-delta${assignment.delta === null ? ' starting' : assignment.delta < 0 ? ' negative' : ''}`}>
+                {assignment.delta === null ? 'Starting grade' : `${assignment.delta > 0 ? '+' : ''}${assignment.delta.toFixed(2)} pp`}
+              </span>
+            </li>
+          ))}
+        </ol>
+        <p className="course-grade-trend-note">Each change shows how an assignment moved the running points average. The official grade may differ because of category weights or school grading rules.</p>
+      </> : <p className="course-grade-trend-empty">No graded assignment points are available to chart for this course.</p>}
+    </section>
+  )
 }
 
 function categoryKey(value: string) {
@@ -2121,6 +2320,13 @@ function Dashboard({
             <p className="category-impact-note">Assignment effects compare the points-based category average from graded assignments with and without each score. They are percentage-point changes, not changes to the overall course grade.</p>
           </div>
         </div>
+        <CourseGradeTrend
+          course={active}
+          hypotheticalMode={hypotheticalMode}
+          hypotheticalGrade={hypotheticalGrade}
+          assignmentOverrides={assignmentOverrides}
+          hypotheticalAssignments={hypotheticalAssignments}
+        />
         <QuarterProgress
           period={period}
           reportingPeriods={dashboard.reportingPeriods}
@@ -2419,6 +2625,12 @@ function Dashboard({
               <span>OFFICIAL CUMULATIVE GPA</span>
             </div>}
           </div>
+          {courseGpa.gpa !== null && <div className="gpa-scale">
+            <div className="gpa-scale-track" role="meter" aria-label="Estimated GPA on a 4.0 scale" aria-valuemin={0} aria-valuemax={4} aria-valuenow={courseGpa.gpa} aria-valuetext={`${courseGpa.gpa.toFixed(2)} out of 4.00`}>
+              <span style={{ width: `${Math.max(0, Math.min(courseGpa.gpa / 4 * 100, 100))}%` }} />
+            </div>
+            <div className="gpa-scale-labels" aria-hidden="true"><span>0.0</span><span>1.0</span><span>2.0</span><span>3.0</span><span>4.0</span></div>
+          </div>}
           <p className="gpa-disclaimer">This is an estimate for the selected reporting period, not an official or cumulative StudentVUE GPA.</p>
         </section>
         <QuarterProgress
